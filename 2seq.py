@@ -9,7 +9,8 @@
 
 (Дополнительно*) Предусмотреть что пользователь может использовать один из 3-х разделителей: запятую, точку с запятой, слэш (1,2,3 1;2;3 1/2/3), но только какой то один 1,2;3/4 - так нельзя"""
 used = []
-list_items = (input("Введите  элементы списка череззапятую, точку с запятой, слэш "))
-print(list_items)
-unique = [used.append(x) for x in list_items if x not in used]
+list_items = (input("Введите  элементы списка через запятую, точку с запятой, слэш "))
+list_items1 = list_items.split(",")
+print(list_items1)
+unique = [used.append(x) for x in list_items1 if x not in used]
 print(used)
