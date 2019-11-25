@@ -19,42 +19,20 @@ print(result) # [5, 1]
 '''
 
 
-day = { '01': "первое",
-        "02": "второе",
-        "03" : "третье",
-        "04" : "четвертое",
-        "05" : "пятое",
-        "06" : "шестое",
-        "07": "седьмое",
-        "08": "восьмое",
-        "09": "девятое"}
-month = {'01' : 'январь',
-         '02': "февраля",
-
-         }
 again = "Да"
+import random
+names = ['Пушкин', 'Холмс', 'Лермонтов', 'Есенин', 'Гагарин', "Ленин", "Сталин", "Толстой" ]
+date_of_birth = ['06.06.1799', '06.01.1854', '15.10.1814', '03.10.1895', '09.03.1934', '22.04.1870', '18.12.1878','09.09.1828']
 while again == 'Да':
-    import random
-    names = ['Пушкин', 'Холмс', 'Лермонтов', 'Есенин', 'Гагарин']
     result = random.sample(names, 2)
     print(result)
-    data_born = input('Введите дату рождения через запятую:дд.мм.гггг ')
-
-    if  age_Pushkin != grp:
-         fla = fla + 1
-    elif age_Holms !=  grh:
-         fla = fla + 1
-    elif age_Lermontov !=  grl:
-         fla = fla + 1
-    elif age_Esenin !=  gre:
-         fla = fla + 1
-    elif age_Gagarin != grg:
-         fla = fla + 1
-    else: tra = 5 - fla
-    ptra = tra / 5 * 100
-    pfla = fla / 5 * 100
-    print ("правильных ответов :" , tra, ptra)
-    print ("Не правильных ответов ;" , fla, pfla)
-    again = (input('Попробовать еще раз? '))
-print("Всего хорошего")
-print('end')
+    answer_tru = []
+    for i in result:
+        data_born_anwer = input(f'Когда родился/родилась {names[i]}? ')
+        if data_born_anwer==date_of_birth[i]:
+            answer_tru.append(1)
+        else:
+            date_list = date_of_birth[i].split('.')
+            print (date_of_birth)
+    again = input('Продолжить игру?Да/Нет')
+print('Всего хорошего')
